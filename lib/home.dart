@@ -9,6 +9,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  bool isMute = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -59,10 +60,17 @@ class _HomeScreenState extends State<HomeScreen> {
                         left: 7,
                         bottom: 7,
                         child: Row(
-                          children: const [
-                            Icon(
-                              Icons.mic,
-                              color: Colors.white,
+                          children: [
+                            InkWell(
+                              onTap: () {
+                                setState(() {
+                                  isMute = !isMute;
+                                });
+                              },
+                              child: Icon(
+                                isMute ? Icons.mic_off : Icons.mic,
+                                color: Colors.white,
+                              ),
                             ),
                             SizedBox(
                               width: 5,
