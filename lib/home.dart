@@ -17,7 +17,13 @@ class _HomeScreenState extends State<HomeScreen> {
         leading: Icon(Icons.arrow_back),
         title: Row(
           mainAxisSize: MainAxisSize.min,
-          children: [Text('Team Sync'), Icon(Icons.arrow_right)],
+          children: const [
+            Text(
+              'Team Sync',
+              style: TextStyle(fontWeight: FontWeight.w400, fontSize: 17),
+            ),
+            Icon(Icons.arrow_right)
+          ],
         ),
         actions: const [
           Icon(Icons.refresh),
@@ -35,7 +41,7 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Column(
           children: [
             const SizedBox(
-              height: 20,
+              height: 25,
             ),
             Center(
               child: ClipRRect(
@@ -43,7 +49,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: Stack(
                   children: [
                     SizedBox(
-                      height: 300,
+                      height: 340,
                       child: Image.asset(
                         'lib/images/profile_img.png',
                         fit: BoxFit.fill,
@@ -74,7 +80,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             const SizedBox(
-              height: 20,
+              height: 22,
             ),
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
@@ -88,7 +94,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             const SizedBox(
-              height: 10,
+              height: 14,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
